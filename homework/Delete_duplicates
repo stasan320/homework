@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+void delete_duplicates () {
+	int i, j, k = 0, a;
+
+	cin >> a;
+
+	int *Array = new int[a];
+
+	for (i = 0; i < a; i++) {
+		cin >> Array[i];
+	}
+
+	for (i = 0; i < a; i++) {
+		for (j = 0; j < a; j++) {
+			if ((Array[i] == Array[j]) & (i != j)){
+				k = i;
+				for (k; k < 9; k++) {
+					Array[k] = Array[k + 1];
+				}
+				a = a - 1;
+			}
+		}
+	}
+
+	for (i = 0; i < a; i++) {
+		cout << Array[i] << " ";
+	}
+  delete[] Array;
+}
+
+int main() {
+	delete_duplicates();
+	return 0;
+}
