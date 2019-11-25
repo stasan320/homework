@@ -1,0 +1,41 @@
+//Напишите эффективную процедуру, выписывающую из массива длины n все элементы, у которых произведение ненулевых цифр больше k. В комментариях напишите, почему перебор - эффективный
+
+#include <iostream>
+
+using namespace std;
+
+void proc() {
+	int i, n, k, m, gan, ost = 0, mass;
+	cin >> n; //Вводим размер массива
+	int* arr = new int[n]; 
+
+	for (i = 0; i < n; i++) {
+		cin >> arr[i];
+	}
+
+	cin >> k;
+
+	for (i = 0; i < n; i++) {
+		mass = arr[i];
+		gan = 1;
+		m = 0;
+		while (m == 0) {
+			ost = mass % 10;
+			if (ost != 0) {
+				gan = ost * gan;
+			}
+			if (mass == 0) {
+				m = 1;
+			}
+			mass = mass / 10;
+		}
+		if (gan > k) {
+			cout << arr[i] << endl;
+		}
+	}
+}
+
+int main()
+{
+	proc();
+}
