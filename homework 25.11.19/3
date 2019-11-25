@@ -1,0 +1,27 @@
+/*Напишите программу находящую первые n составных чисел.
+Программа должна работать не более чем за O(n*log log n) шагов.*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n, i = 1, k = 0, l = 1, m;
+	cin >> n;
+
+	while (k < n) {
+		m = 0;
+		i = 2;
+		while ((i < l) && (m == 0)) {
+			if (l % i == 0) {
+				k++;
+				cout << l << endl;
+				m = 1;
+			}
+			i++;
+		}
+		l++;
+	}
+	return 0;
+}
