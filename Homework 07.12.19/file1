@@ -22,8 +22,8 @@ void fun() {
 				left = x;
 			}
 		}
-		cout << x << endl;
 	}
+	cout << x << endl;
 }
 
 int main()
