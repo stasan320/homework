@@ -23,7 +23,6 @@ void fun() {
 			}
 		}
 	}
-	cout << x << endl;
 }
 
 int main()
