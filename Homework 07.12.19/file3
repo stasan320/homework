@@ -1,1 +1,26 @@
-//file
+//Вычисление ЧФ с помощью разделяй и властвуй
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n, i;
+	cin >> n;
+
+	if (n == 0) {
+		cout << "F(" << n << ") = 0";
+	}
+	if (n == 1 || n == 2) {
+		cout << "F(" << n << ") = 1";
+	}
+	else {
+		if (n % 2 == 0) {
+			cout << "F(" << n << ") = " << pow(n / 2 + 1, 2) - pow(n / 2 - 1, 2);
+		}
+		else {
+			cout << "F(" << n << ") = " << pow((n - 1) / 2, 2) + pow((n - 1) / 2 + 1, 2);;
+		}
+	}
+}
