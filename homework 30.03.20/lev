@@ -21,12 +21,6 @@ int main() {
 		res[0][i] = res[0][i - 1] + add;
 	}
 
-	/*for (i = 1; i <= v1; i++) {
-		for (j = 1; j <= v2; j++) {
-			res[i][j] = min((res[i - 1][j] + del, res[i][j - 1] + add), res[i - 1][j - 1] + (s1[i - 1] == s2[j - 1] ? 0 : rep));
-		}
-	}*/
-
 	for (i = 1; i <= v1; i++) {
 		for (j = 1; j <= v2; j++) {
 			if (s1[i - 1] == s2[j - 1]) {
